@@ -6,7 +6,8 @@ let btnCleanup = $("#btnCleanup");
 let ulTasks = $("#ulTasks");
 
 function addItem() {
-
+let taskText = inpNewTask.val().trim();
+if (taskText === '') return;
     let listItem = $('<li>', {'class': 'list-group-item', text: inpNewTask.val()})
 
     //setting the class of list item to disabled (on click)
